@@ -108,6 +108,6 @@ def activity_with_capacity():
         "name": "Small Group",
         "description": "A small group activity",
         "schedule": "Daily",
-        "max_participants": 2,
+        "max_participants": 3,
         "participants": ["user1@test.edu", "user2@test.edu"]
     }
