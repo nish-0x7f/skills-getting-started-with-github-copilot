@@ -113,6 +113,9 @@ document.addEventListener("DOMContentLoaded", () => {
         messageDiv.className = "success";
         signupForm.reset();
         // Refresh the activities list to show updated participant count
+        while (activitySelect.options.length > 1) {
+          activitySelect.remove(1);
+        }
         fetchActivities();
       } else {
         messageDiv.textContent = result.detail || "An error occurred";
@@ -134,5 +137,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Initialize app
+  while (activitySelect.options.length > 1) {
+    activitySelect.remove(1);
+  }
   fetchActivities();
 });
