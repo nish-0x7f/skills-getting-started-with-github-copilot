@@ -2,9 +2,9 @@
 Pytest configuration and shared fixtures for FastAPI tests.
 
 Provides:
-- app: Fresh FastAPI application instance
+- fresh_app: Fresh FastAPI application instance with clean activities state
 - client: TestClient for making HTTP requests
-- activities_fixture: Clean activities data for each test
+- activity_with_capacity: Sample activity configured near capacity for edge-case tests
 """
 
 import pytest
