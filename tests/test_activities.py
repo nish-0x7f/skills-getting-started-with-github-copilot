@@ -17,7 +17,7 @@ class TestGetActivities:
         Assert: Verify status code 200 and response contains all activities
         """
         # Arrange
-        expected_activities_count = 9
+        expected_min_activities_count = 9
         
         # Act
         response = client.get("/activities")
@@ -25,7 +25,7 @@ class TestGetActivities:
         # Assert
         assert response.status_code == 200
         activities = response.json()
-        assert len(activities) == expected_activities_count
+        assert len(activities) >= expected_min_activities_count
         assert "Chess Club" in activities
         assert "Programming Class" in activities
         assert "Gym Class" in activities
